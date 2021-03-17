@@ -2,7 +2,7 @@ import { isEmpty } from 'lodash';
 import React, { useState } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Button, Icon, Input } from 'react-native-elements'
-import { reauthenticate, updateEmail, updateProfile } from '../../utils/actions';
+import { reauthenticate, updateEmail } from '../../utils/actions';
 import { validateEmail } from '../../utils/helpers';
 
 

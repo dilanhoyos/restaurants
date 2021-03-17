@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import Restaurants from '../screens/Restaurants';
+import Restaurants from '../screens/restaurants/Restaurants';
 
 const Stack = createStackNavigator();
 
 export default function RestaurantsStack() {
+
     return (
         <Stack.Navigator>
             <Stack.Screen

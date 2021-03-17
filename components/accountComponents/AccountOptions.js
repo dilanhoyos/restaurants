@@ -5,6 +5,7 @@ import { map } from "lodash";
 import Modal from '../Modal';
 import ChangeDisplayNameForm from './ChangeDisplayNameForm';
 import ChangeEmailForm from './ChangeEmailForm';
+import ChangePasswordForm from './ChangePasswordForm';
 
 export default function AccountOptions({ user, toastRef, setReloadUser }) {
     const generateOptions = () => {
@@ -31,7 +32,7 @@ export default function AccountOptions({ user, toastRef, setReloadUser }) {
                 iconColorLeft: '#a7bfd3',
                 iconNameRight: 'chevron-right',
                 iconColorRight: '#a7bfd3',
-                onPress: () => selectedComponent('pasword')
+                onPress: () => selectedComponent('password')
             }
         ]
     }
@@ -63,7 +64,10 @@ export default function AccountOptions({ user, toastRef, setReloadUser }) {
             break;
             case 'password':
                 setRenderComponent(
-                    <Text></Text>
+                    <ChangePasswordForm
+                        setShowModal={setShowModal}
+                        toastRef={toastRef}
+                    />
                 )
             break;
         }
